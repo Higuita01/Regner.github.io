@@ -549,13 +549,17 @@ section{
 
 }
 
-.skill-card i{
+.skill-card i,
+.skill-card iconify-icon{
 
     font-size:65px;
 
     margin-bottom:20px;
 
+    display:block;
+
 }
+
 
 .skill-card h3{
 
