@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMA — Moda contemporánea argentina</title>
+  <meta
+    name="description"
+    content="LUMA es una boutique de moda contemporánea de Buenos Aires. Colecciones de mujer, hombre y accesorios diseñadas para vestir tu historia."
+  />
+
+  <!-- Tipografías: Playfair Display (títulos) + Jost (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Barra superior de beneficios -->
+  <div class="barra-beneficios" aria-label="Beneficios de la tienda">
+    <p>Envío gratis en compras superiores a $100.000 &nbsp;·&nbsp; 3 cuotas sin interés &nbsp;·&nbsp; Cambios sin cargo</p>
+  </div>
+
+  <!-- ─────────────────────────── HEADER ─────────────────────────── -->
+  <header class="header" id="header">
+    <div class="contenedor header__interior">
+      <a href="#inicio" class="logo" aria-label="LUMA — volver al inicio">
+        LUMA<span class="logo__punto">.</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#mujer" class="nav__link">Mujer</a></li>
+          <li><a href="#hombre" class="nav__link">Hombre</a></li>
+          <li><a href="#accesorios" class="nav__link">Accesorios</a></li>
+          <li><a href="#coleccion" class="nav__link">Nueva colección</a></li>
+          <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__acciones">
+        <a href="#coleccion" class="btn btn--acento btn--chico">Comprar ahora</a>
+        <button
+          class="hamburguesa"
+          id="boton-menu"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="menu-movil"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú móvil a pantalla completa -->
+  <div class="menu-movil" id="menu-movil" aria-hidden="true">
+    <nav aria-label="Navegación móvil">
+      <ul class="menu-movil__lista">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#mujer">Mujer</a></li>
+        <li><a href="#hombre">Hombre</a></li>
+        <li><a href="#accesorios">Accesorios</a></li>
+        <li><a href="#coleccion">Nueva colección</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#coleccion" class="btn btn--acento menu-movil__cta">Comprar ahora</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ─────────────────────────── INICIO ─────────────────────────── -->
+    <section class="hero" id="inicio">
+      <div class="hero__imagen" role="img" aria-label="Modelo luciendo un look editorial de la temporada">
+        <img
+          src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=70"
+          srcset="
+            https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=70 900w,
+            https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1800&q=70 1800w
+          "
+          sizes="100vw"
+          alt=""
+          fetchpriority="high"
+        />
+      </div>
+      <div class="hero__velo" aria-hidden="true"></div>
+
+      <div class="contenedor hero__contenido">
+        <p class="etiqueta etiqueta--hero">Nueva temporada · Otoño-Invierno 2026</p>
+        <h1 class="hero__titulo">LUMA</h1>
+        <p class="hero__slogan">“Vestir es una forma de decir quién sos.”</p>
+        <p class="hero__texto">
+          Moda contemporánea diseñada y confeccionada en Buenos Aires, para
+          quienes eligen la elegancia simple.
+        </p>
+        <div class="hero__botones">
+          <a href="#mujer" class="btn btn--acento">Ver colección</a>
+          <a href="#nosotros" class="btn btn--fantasma">Nuestra historia</a>
+        </div>
+      </div>
+
+      <a href="#mujer" class="hero__scroll" aria-label="Bajar a la colección de mujer">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ─────────────────────────── MUJER ─────────────────────────── -->
+    <section class="seccion" id="mujer">
+      <div class="contenedor">
+        <header class="cabecera-seccion reveal">
+          <p class="etiqueta">Colección 01</p>
+          <h2 class="cabecera-seccion__titulo">Mujer</h2>
+          <p class="cabecera-seccion__texto">
+            Prendas con carácter femenino y caída impecable: del lino fresco al
+            denim con actitud. Diseño propio, temporada tras temporada.
+          </p>
+        </header>
+
+        <div class="pills reveal" role="group" aria-label="Filtrar por categoría" data-pills="mujer">
+          <button class="pill pill--activa" data-filtro="Todas">Todas</button>
+          <button class="pill" data-filtro="Remeras y tops">Remeras y tops</button>
+          <button class="pill" data-filtro="Camisas">Camisas</button>
+          <button class="pill" data-filtro="Pantalones">Pantalones</button>
+          <button class="pill" data-filtro="Jeans">Jeans</button>
+          <button class="pill" data-filtro="Vestidos">Vestidos</button>
+          <button class="pill" data-filtro="Faldas">Faldas</button>
+          <button class="pill" data-filtro="Abrigos">Abrigos</button>
+        </div>
+
+        <div class="grid-productos reveal" data-genero="mujer" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Franja editorial -->
+    <div class="franja-imagen" aria-hidden="true">
+      <img
+        src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1600&q=70"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+
+    <!-- ─────────────────────────── HOMBRE ─────────────────────────── -->
+    <section class="seccion seccion--crema" id="hombre">
+      <div class="contenedor">
+        <header class="cabecera-seccion reveal">
+          <p class="etiqueta">Colección 02</p>
+          <h2 class="cabecera-seccion__titulo">Hombre</h2>
+          <p class="cabecera-seccion__texto">
+            Sastrería relajada y básicos que se hacen notar: telas nobles,
+            cortes limpios y colores que acompañan todos los días.
+          </p>
+        </header>
+
+        <div class="pills reveal" role="group" aria-label="Filtrar por categoría" data-pills="hombre">
+          <button class="pill pill--activa" data-filtro="Todas">Todas</button>
+          <button class="pill" data-filtro="Remeras">Remeras</button>
+          <button class="pill" data-filtro="Camisas">Camisas</button>
+          <button class="pill" data-filtro="Pantalones">Pantalones</button>
+          <button class="pill" data-filtro="Jeans">Jeans</button>
+          <button class="pill" data-filtro="Buzos">Buzos</button>
+          <button class="pill" data-filtro="Camperas">Camperas</button>
+          <button class="pill" data-filtro="Bermudas">Bermudas</button>
+        </div>
+
+        <div class="grid-productos reveal" data-genero="hombre" aria-live="polite"></div>
+
+        <!-- Banner grande de la colección hombre -->
+        <div class="banner-coleccion reveal">
+          <div class="banner-coleccion__imagen">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=75"
+              alt="Modelo masculino con campera de la colección"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="banner-coleccion__texto">
+            <p class="etiqueta">Imprescindibles</p>
+            <h3>El guardarropa esencial del hombre LUMA</h3>
+            <p>
+              Camisas que acompañan, jeans que se amoldan y camperas que
+              atraviesan estaciones. Piezas pensadas para durar y para
+              combinarse entre sí.
+            </p>
+            <a href="#contacto" class="btn btn--linea">Consultá por tu look</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── ACCESORIOS ───────────────────────── -->
+    <section class="seccion" id="accesorios">
+      <div class="contenedor">
+        <header class="cabecera-seccion reveal">
+          <p class="etiqueta">Detalles que hablan</p>
+          <h2 class="cabecera-seccion__titulo">Accesorios</h2>
+          <p class="cabecera-seccion__texto">
+            El final del look: carteras, bijouterie y pequeños objetos de deseo,
+            curados uno por uno para acompañar la colección femenina.
+          </p>
+        </header>
+
+        <div class="pills reveal" role="group" aria-label="Filtrar por categoría" data-pills="accesorios">
+          <button class="pill pill--activa" data-filtro="Todos">Todos</button>
+          <button class="pill" data-filtro="Carteras">Carteras</button>
+          <button class="pill" data-filtro="Bolsos">Bolsos</button>
+          <button class="pill" data-filtro="Gorras">Gorras</button>
+          <button class="pill" data-filtro="Cinturones">Cinturones</button>
+          <button class="pill" data-filtro="Anteojos">Anteojos</button>
+          <button class="pill" data-filtro="Bijouterie">Bijouterie</button>
+          <button class="pill" data-filtro="Pañuelos">Pañuelos</button>
+        </div>
+
+        <div class="grid-productos reveal" data-genero="accesorios" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────── NUEVA COLECCIÓN ─────────────────────── -->
+    <section class="seccion seccion--oscura" id="coleccion">
+      <div class="contenedor">
+        <header class="cabecera-seccion cabecera-seccion--oscura reveal">
+          <p class="etiqueta">Recién llegado</p>
+          <h2 class="cabecera-seccion__titulo">Nueva colección</h2>
+          <p class="cabecera-seccion__texto">
+            Otoño-Invierno 2026: lo último en entrar al atelier, seleccionado
+            con el mismo criterio de siempre: menos, pero mejor.
+          </p>
+        </header>
+
+        <div class="grid-nueva reveal" id="grid-nueva" aria-live="polite"></div>
+
+        <div class="centrado reveal">
+          <a href="#mujer" class="btn btn--acento">Explorar toda la colección</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────── NOSOTROS ────────────────────────── -->
+    <section class="seccion" id="nosotros">
+      <div class="contenedor nosotros">
+        <div class="nosotros__imagen reveal">
+          <img
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=75"
+            alt="Interior de la boutique LUMA en Palermo"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="nosotros__marco" aria-hidden="true"></div>
+          <p class="nosotros__insignia">Desde 2019 · Buenos Aires</p>
+        </div>
+
+        <div class="nosotros__texto reveal">
+          <p class="etiqueta">Nuestra historia</p>
+          <h2 class="nosotros__titulo">Nacimos en un taller de Palermo</h2>
+          <p>
+            LUMA nació en 2019 en un pequeño taller de Palermo, con una idea
+            simple: que la ropa vuelva a ser personal. Diseñamos cada prenda
+            en Buenos Aires y trabajamos con talleres locales que cuidan las
+            telas, las costuras y los tiempos.
+          </p>
+          <p>
+            No seguimos tendencias por seguir. Elegimos piezas pensadas para
+            durar, combinables entre sí, con el detalle justo. Lo que nos
+            diferencia no es el volumen de producción, sino la obsesión por
+            cada prenda que sale del taller.
+          </p>
+
+          <ul class="nosotros__stats">
+            <li><strong>2019</strong><span>Año de fundación</span></li>
+            <li><strong>+120</strong><span>Prendas por temporada</span></li>
+            <li><strong>4</strong><span>Talleres aliados locales</span></li>
+            <li><strong>100%</strong><span>Diseño propio</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────── CONTACTO ────────────────────────── -->
+    <section class="seccion seccion--crema" id="contacto">
+      <div class="contenedor">
+        <header class="cabecera-seccion reveal">
+          <p class="etiqueta">Escribinos</p>
+          <h2 class="cabecera-seccion__titulo">Contacto</h2>
+          <p class="cabecera-seccion__texto">
+            Visitá la boutique, escribinos por WhatsApp o dejanos un mensaje:
+            te respondemos en el día.
+          </p>
+        </header>
+
+        <div class="contacto-grid">
+          <div class="contacto__datos reveal">
+            <article class="dato">
+              <p class="dato__titulo">Dirección</p>
+              <p>Gurruchaga 2147, Palermo Soho</p>
+              <p>Buenos Aires, Argentina</p>
+            </article>
+            <article class="dato">
+              <p class="dato__titulo">Teléfono / WhatsApp</p>
+              <p><a href="tel:+541148322177">011 4832-2177</a></p>
+            </article>
+            <article class="dato">
+              <p class="dato__titulo">Email</p>
+              <p><a href="mailto:hola@luma.com.ar">hola@luma.com.ar</a></p>
+            </article>
+            <article class="dato">
+              <p class="dato__titulo">Horarios</p>
+              <p>Lun a Sáb · 10 a 20 h</p>
+              <p>Dom y feriados · 11 a 19 h</p>
+            </article>
+            <div class="redes">
+              <p class="dato__titulo">Redes</p>
+              <ul class="redes__lista">
+                <li><a href="#" aria-label="Instagram de LUMA">Instagram</a></li>
+                <li><a href="#" aria-label="TikTok de LUMA">TikTok</a></li>
+                <li><a href="#" aria-label="Pinterest de LUMA">Pinterest</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <form class="formulario reveal" id="formulario" novalidate>
+            <div class="formulario__fila">
+              <div class="formulario__campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required minlength="2" />
+              </div>
+              <div class="formulario__campo">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tumail@ejemplo.com" required />
+              </div>
+            </div>
+            <div class="formulario__campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos qué estás buscando…" required minlength="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn--acento btn--ancho">Enviar mensaje</button>
+            <p class="formulario__error" id="error-formulario" role="alert" hidden></p>
+          </form>
+
+          <div class="formulario-exito reveal" id="exito-formulario" hidden>
+            <p class="formulario-exito__icono" aria-hidden="true">✓</p>
+            <h3>¡Gracias por escribirnos!</h3>
+            <p>Tu mensaje llegó a nuestro equipo. Te vamos a responder en el día, de lunes a sábado de 10 a 20 h.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─────────────────────────── FOOTER ─────────────────────────── -->
+  <footer class="footer">
+    <div class="contenedor footer__interior">
+      <div class="footer__marca">
+        <p class="logo logo--footer">LUMA<span class="logo__punto">.</span></p>
+        <p>Vestir es una forma de decir quién sos.</p>
+      </div>
+      <nav class="footer__col" aria-label="Navegación del pie">
+        <p class="footer__titulo">Explorar</p>
+        <ul>
+          <li><a href="#mujer">Mujer</a></li>
+          <li><a href="#hombre">Hombre</a></li>
+          <li><a href="#accesorios">Accesorios</a></li>
+          <li><a href="#coleccion">Nueva colección</a></li>
+        </ul>
+      </nav>
+      <div class="footer__col">
+        <p class="footer__titulo">La casa</p>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#contacto">Envíos y cambios</a></li>
+          <li><a href="#contacto">Trabajá con nosotros</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__contacto">
+        <p class="footer__titulo">Boutique</p>
+        <p>Gurruchaga 2147, Palermo Soho<br />Buenos Aires, Argentina</p>
+        <p><a href="tel:+541148322177">011 4832-2177</a><br /><a href="mailto:hola@luma.com.ar">hola@luma.com.ar</a></p>
+      </div>
+    </div>
+    <div class="footer__barra">
+      <div class="contenedor footer__barra-interior">
+        <p>© <span id="anio">2026</span> LUMA — Todos los derechos reservados.</p>
+        <p>Hecho a mano en Buenos Aires.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─────────────────── MODAL DE PRODUCTO ─────────────────── -->
+  <div class="modal" id="modal-producto" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" hidden>
+    <div class="modal__fondo" data-cerrar-modal></div>
+    <div class="modal__dialogo" role="document" tabindex="-1">
+      <button class="modal__cerrar" data-cerrar-modal aria-label="Cerrar">
+        <span></span><span></span>
+      </button>
+      <div class="modal__imagen">
+        <img id="modal-img" src="" alt="" />
+      </div>
+      <div class="modal__info">
+        <p class="modal__categoria" id="modal-categoria"></p>
+        <h3 class="modal__titulo" id="modal-titulo"></h3>
+        <p class="modal__precio" id="modal-precio"></p>
+        <p class="modal__descripcion" id="modal-descripcion"></p>
+        <p class="modal__nota">
+          Disponible en boutique y por encargo. Escribinos por WhatsApp y lo
+          reservamos para vos.
+        </p>
+        <a href="#contacto" class="btn btn--acento btn--ancho" data-cerrar-modal>Consultar disponibilidad</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/productos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

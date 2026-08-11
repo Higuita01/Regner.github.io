@@ -1,287 +1,593 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es-AR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leandro Regner — Desarrollo web para comercios</title>
-  <meta name="description" content="Portafolio de Leandro Regner, desarrollador web. Páginas web simples y efectivas para comercios, con presencia en el celular, Google y WhatsApp. Backend con Python y Django." />
-  <meta name="author" content="Leandro Regner" />
+  <title>Leandro Regner — Desarrollo web freelance</title>
+  <meta
+    name="description"
+    content="Leandro Regner, desarrollador web freelance. Landing pages y tiendas online a medida con HTML, CSS y JavaScript. Disponible para tu proyecto."
+  />
 
-  <!-- Favicon minimalista de código -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230a0f1f%22/><text x=%2250%22 y=%2268%22 font-size=%2250%22 text-anchor=%22middle%22 fill=%22%2300e5ff%22 font-family=%22monospace%22>&lt;/&gt;</text></svg>" />
-
-  <!-- Tipografías: Space Grotesk (títulos), Inter (texto), JetBrains Mono (código/etiquetas) -->
+  <!-- Tipografías: Space Grotesk (títulos) + Inter (texto) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- Iconos de tecnologías (devicon) -->
+  <link rel="stylesheet" href="css/portfolio.css" />
+
+  <!-- Iconos de tecnologías -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Marca JS activo: sin JS, los elementos reveal quedan visibles igual -->
-  <script>document.documentElement.classList.add("js");</script>
 </head>
-
 <body>
 
-  <!-- ═════════════════════════ HEADER ═════════════════════════ -->
+  <!-- ─────────────────────────── HEADER ─────────────────────────── -->
   <header class="header" id="header">
     <div class="contenedor header__interior">
       <a href="#inicio" class="logo" aria-label="Leandro Regner — volver al inicio">
-        <span class="logo__simbolo" aria-hidden="true">&lt;/&gt;</span> leandro.regner
+        Leandro<span class="logo__punto">.</span>
       </a>
 
       <nav class="nav" aria-label="Navegación principal">
         <ul class="nav__lista">
           <li><a href="#inicio" class="nav__link nav__link--activo">Inicio</a></li>
-          <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
-          <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
           <li><a href="#tecnologias" class="nav__link">Tecnologías</a></li>
+          <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+          <li><a href="#servicios" class="nav__link">Servicios</a></li>
+          <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+          <li><a href="#sistemas" class="nav__link">Sistemas</a></li>
+          <li><a href="#proceso" class="nav__link">Cómo trabajo</a></li>
           <li><a href="#contacto" class="nav__link">Contacto</a></li>
-          <li><a href="proyectos.html" class="nav__link nav__link--sistemas">Sistemas <span aria-hidden="true">→</span></a></li>
         </ul>
       </nav>
 
-      <button class="hamburguesa" id="boton-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header__acciones">
+        <a href="#contacto" class="btn btn--acento btn--chico">Escribime</a>
+        <button
+          class="hamburguesa"
+          id="boton-menu"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="menu-movil"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Menú móvil (pantalla completa) -->
+  <!-- Menú móvil a pantalla completa -->
   <div class="menu-movil" id="menu-movil" aria-hidden="true">
-    <nav class="menu-movil__nav" aria-label="Navegación móvil">
-      <a href="#inicio" class="menu-movil__link">Inicio</a>
-      <a href="#sobre-mi" class="menu-movil__link">Sobre mí</a>
-      <a href="#proyectos" class="menu-movil__link">Proyectos</a>
-      <a href="#tecnologias" class="menu-movil__link">Tecnologías</a>
-      <a href="#contacto" class="menu-movil__link">Contacto</a>
-      <a href="proyectos.html" class="menu-movil__link menu-movil__link--destacado">Aplicaciones y Sistemas <span aria-hidden="true">→</span></a>
+    <nav aria-label="Navegación móvil">
+      <ul class="menu-movil__lista">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#tecnologias">Tecnologías</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sistemas">Sistemas</a></li>
+        <li><a href="#proceso">Cómo trabajo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn--acento menu-movil__cta">Empecemos</a>
     </nav>
   </div>
 
   <main>
-
-    <!-- ═════════════════════════ HERO ═════════════════════════ -->
+    <!-- ─────────────────────────── INICIO ─────────────────────────── -->
     <section class="hero" id="inicio">
-      <div class="glow glow--cian" aria-hidden="true"></div>
-      <div class="glow glow--violeta" aria-hidden="true"></div>
-      <div class="hero__rejilla" aria-hidden="true"></div>
+      <div class="hero__relleno" aria-hidden="true"></div>
 
-      <div class="contenedor hero__interior">
-        <p class="etiqueta reveal">hola, soy</p>
-        <h1 class="hero__titulo reveal">Leandro <span class="hero__apellido">Regner</span></h1>
-        <p class="hero__subtitulo reveal">Desarrollo web para negocios que quieren <span class="texto-cian">vender más</span></p>
-        <p class="hero__texto reveal">
-          Hago páginas web simples y efectivas para comercios, con presencia en el celular,
-          Google y WhatsApp. Código limpio, proyectos a tiempo y soporte incluido.
+      <div class="contenedor hero__contenido">
+        <p class="etiqueta etiqueta--hero">Disponible para proyectos freelance</p>
+        <h1 class="hero__titulo">Hola, soy <em>Leandro Regner</em>.</h1>
+        <p class="hero__texto">
+          Desarrollador web freelance. Armo <strong>landing pages</strong> y
+          <strong>tiendas online</strong> a medida con HTML, CSS y JavaScript puro:
+          webs rápidas, elegantes y sin dependencias innecesarias.
         </p>
-
-        <div class="hero__botones reveal reveal--1">
-          <a href="#proyectos" class="btn btn--primario">Ver mis proyectos <span aria-hidden="true">→</span></a>
-          <a href="#contacto" class="btn btn--secundario">Contacto</a>
+        <div class="hero__botones">
+          <a href="#proyectos" class="btn btn--acento">Ver mis proyectos</a>
+          <a href="#contacto" class="btn btn--fantasma">Hablemos</a>
         </div>
 
-        <p class="hero__estado reveal reveal--2">
-          <span class="punto-estado" aria-hidden="true"></span> disponible para nuevos proyectos
-        </p>
+        <ul class="hero__datos" aria-label="Datos rápidos">
+          <li><span class="hero__dato-titulo">Ubicación</span>Santa Fe, Argentina</li>
+          <li><span class="hero__dato-titulo">Idiomas</span>Español (nativo) · Inglés (básico)</li>
+        </ul>
       </div>
 
-      <a href="#sobre-mi" class="hero__scroll" aria-label="Bajar a la siguiente sección"><span aria-hidden="true">↓</span></a>
+      <a href="#tecnologias" class="hero__scroll" aria-label="Bajar a tecnologías">
+        <span></span>
+      </a>
     </section>
 
-    <!-- ═════════════════════════ SOBRE MÍ ═════════════════════════ -->
-    <section class="sobre-mi" id="sobre-mi">
+    <!-- ───────────────────────── TECNOLOGÍAS ───────────────────────── -->
+    <section class="seccion" id="tecnologias">
       <div class="contenedor">
-        <p class="etiqueta reveal">sobre_mi</p>
-        <h2 class="titulo-seccion reveal">Quién está detrás del código</h2>
+        <header class="cabecera-seccion reveal">
+          <p class="etiqueta">Tecnologías</p>
+          <h2 class="cabecera-seccion__titulo">Mi stack</h2>
+          <p class="cabecera-seccion__texto">
+            Herramientas con las que construyo cada proyecto, de la idea al deploy.
+          </p>
+        </header>
 
-        <div class="sobre-mi__grid">
-          <!--
-            ESPACIO PARA FOTO:
-            Reemplazá el bloque .marco-foto por:
-            <img src="imagenes/leandro.jpg" alt="Leandro Regner" class="sobre-mi__foto" />
-            y listo, se adapta al tamaño del marco.
-          -->
-          <div class="marco-foto reveal" role="img" aria-label="Espacio reservado para la foto de Leandro Regner">
-            <div class="marco-foto__interior">
-              <span class="marco-foto__icono" aria-hidden="true">👨‍💻</span>
-              <code class="marco-foto__ruta">~/assets/leandro.jpg</code>
-              <span class="marco-foto__aviso">// espacio para tu foto</span>
+        <div class="tech-marquee reveal">
+          <div class="tech-tren" aria-hidden="false">
+            <div class="tech-tren__grupo">
+              <div class="tech">
+                <i class="devicon-python-plain colored"></i>
+                <h3>Python</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-django-plain"></i>
+                <h3>Django</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-html5-plain colored"></i>
+                <h3>HTML5</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-css3-plain colored"></i>
+                <h3>CSS3</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-javascript-plain colored"></i>
+                <h3>JavaScript</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-sqlite-plain"></i>
+                <h3>SQLite</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-git-plain colored"></i>
+                <h3>Git</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-github-original"></i>
+                <h3>GitHub</h3>
+              </div>
+            </div>
+            <div class="tech-tren__grupo" aria-hidden="true">
+              <div class="tech">
+                <i class="devicon-python-plain colored"></i>
+                <h3>Python</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-django-plain"></i>
+                <h3>Django</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-html5-plain colored"></i>
+                <h3>HTML5</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-css3-plain colored"></i>
+                <h3>CSS3</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-javascript-plain colored"></i>
+                <h3>JavaScript</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-sqlite-plain"></i>
+                <h3>SQLite</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-git-plain colored"></i>
+                <h3>Git</h3>
+              </div>
+              <div class="tech">
+                <i class="devicon-github-original"></i>
+                <h3>GitHub</h3>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="sobre-mi__texto reveal">
-            <p>
-              Soy <strong>Leandro Regner</strong>, desarrollador web de Argentina. Trabajo con
-              comercios y emprendimientos que necesitan presencia digital real: páginas que se
-              ven bien en el celular, que aparecen en Google y que llevan clientes directo a
-              WhatsApp.
+    <!-- ─────────────────────────── SOBRE MÍ ─────────────────────────── -->
+    <section class="seccion seccion--alterna" id="sobre-mi">
+      <div class="contenedor sobre-mi">
+        <div class="sobre-mi__foto reveal">
+          <!-- Reemplazá imagenes/leandro.jpg por tu foto real -->
+          <img src="imagenes/leandro.jpg" alt="Foto de Leandro Regner" loading="lazy" />
+        </div>
+        <div class="sobre-mi__texto reveal">
+          <p class="etiqueta">Sobre mí</p>
+          <h2 class="cabecera-seccion__titulo">Un poco de mi historia</h2>
+          <p>
+            Me estoy formando como <strong>Desarrollador Full Stack</strong>, con
+            especial interés en el desarrollo Backend con <strong>Python y Django</strong>.
+          </p>
+          <p>
+            Construyo aplicaciones web y proyectos personales para adquirir experiencia
+            práctica en automatización, gestión de producción y sistemas industriales.
+            Cuando trabajo con un cliente, apunto a lo mismo: soluciones simples,
+            claras y que resuelven de verdad.
+          </p>
+          <ul class="sobre-mi__lista">
+            <li>Landing pages y tiendas online a medida</li>
+            <li>Automatización y gestión de producción</li>
+            <li>Código limpio, responsive y sin frameworks pesados</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────── SERVICIOS ────────────────────────── -->
+    <section class="seccion" id="servicios">
+      <div class="contenedor">
+        <header class="cabecera-seccion reveal">
+          <p class="etiqueta">Servicios</p>
+          <h2 class="cabecera-seccion__titulo">En qué te puedo ayudar</h2>
+          <p class="cabecera-seccion__texto">
+            Proyectos claros, con precio cerrado antes de empezar y entrega en
+            tiempo récord. Sin sorpresas ni letra chica.
+          </p>
+        </header>
+
+        <div class="grid-servicios">
+          <article class="servicio reveal">
+            <p class="servicio__numero" aria-hidden="true">01</p>
+            <h3 class="servicio__titulo">Landing pages</h3>
+            <p class="servicio__texto">
+              Una página única para presentar tu negocio o emprendimiento: clara,
+              rápida y con un diseño que convence en el primer vistazo.
             </p>
-            <p>
-              También desarrollo <strong>sistemas backend con Python y Django</strong>: dashboards
-              de monitoreo industrial, gestión de producción y control de stock. Me gusta el
-              código claro, entregar a tiempo y acompañar al cliente después de publicar.
+            <p class="servicio__precio">Desde US$50</p>
+          </article>
+
+          <article class="servicio reveal">
+            <p class="servicio__numero" aria-hidden="true">02</p>
+            <h3 class="servicio__titulo">Tiendas online</h3>
+            <p class="servicio__texto">
+              Tu catálogo en la web con filtros por categoría, ficha de producto y
+              sección de novedades. Pensada para vender sin fricciones.
             </p>
-            <ul class="sobre-mi__lista">
-              <li><span class="texto-cian" aria-hidden="true">▹</span> Páginas web mobile-first</li>
-              <li><span class="texto-cian" aria-hidden="true">▹</span> Backend con Python / Django</li>
-              <li><span class="texto-cian" aria-hidden="true">▹</span> Presencia en Google y WhatsApp</li>
-              <li><span class="texto-cian" aria-hidden="true">▹</span> Soporte incluido después de entregar</li>
+            <p class="servicio__precio">Desde US$100</p>
+          </article>
+
+          <article class="servicio reveal">
+            <p class="servicio__numero" aria-hidden="true">03</p>
+            <h3 class="servicio__titulo">Rediseño y actualización</h3>
+            <p class="servicio__texto">
+              Tu web vieja o hecha con plantillas, renovada: más rápida, moderna y
+              perfecta en celulares. Sin volver a empezar de cero.
+            </p>
+            <p class="servicio__precio">Desde US$80</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────── PROYECTOS ────────────────────────── -->
+    <section class="seccion seccion--oscura" id="proyectos">
+      <div class="contenedor">
+        <header class="cabecera-seccion cabecera-seccion--oscura reveal">
+          <p class="etiqueta">Proyectos</p>
+          <h2 class="cabecera-seccion__titulo">Algunos trabajos</h2>
+          <p class="cabecera-seccion__texto">
+            Acá va lo que ya construí. Cada proyecto nuevo suma a esta galería.
+          </p>
+        </header>
+
+        <!-- Caso destacado: LUMA -->
+        <article class="proyecto reveal">
+          <a href="luma/index.html" class="proyecto__imagen" target="_blank" rel="noopener" aria-label="Abrir la tienda LUMA en una pestaña nueva">
+            <img
+              src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=75"
+              alt="Vista previa de la tienda online LUMA"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="proyecto__badge">Ver proyecto →</span>
+          </a>
+          <div class="proyecto__info">
+            <p class="etiqueta">Caso destacado</p>
+            <h3 class="proyecto__titulo">LUMA — Tienda de moda contemporánea</h3>
+            <p class="proyecto__descripcion">
+              Tienda online completa para una boutique: catálogo con filtros por
+              categoría (mujer, hombre, accesorios), modal de producto con selección
+              de talle, grilla de nueva colección y diseño editorial responsive.
+              Hecha con HTML, CSS y JavaScript puro, sin frameworks.
+            </p>
+            <ul class="proyecto__tags" aria-label="Tecnologías usadas">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Responsive</li>
             </ul>
+            <div class="proyecto__botones">
+              <a href="luma/index.html" class="btn btn--acento" target="_blank" rel="noopener">Ver el proyecto</a>
+              <a href="https://github.com/Higuita01" class="btn btn--linea btn--linea-oscuro" target="_blank" rel="noopener">Ver el código</a>
+            </div>
           </div>
+        </article>
+
+        <!-- Sistemas industriales -->
+        <div class="grid-proyectos">
+          <article class="proyecto-placeholder reveal">
+            <a class="proyecto-placeholder__link" href="https://github.com/Higuita01" target="_blank" rel="noopener">Ver más en GitHub →</a>
+            <p class="proyecto-placeholder__numero" aria-hidden="true">+</p>
+            <h3 class="proyecto-placeholder__titulo">¿Tu proyecto acá?</h3>
+            <p class="proyecto-placeholder__texto">
+              Este espacio está reservado para tu web. Contame tu idea y la hacemos
+              realidad.
+            </p>
+            <a href="#contacto" class="btn btn--acento btn--chico">Empecemos</a>
+          </article>
+
+          <article class="proyecto-placeholder reveal">
+            <p class="proyecto-placeholder__numero" aria-hidden="true">+</p>
+            <h3 class="proyecto-placeholder__titulo">Próximamente</h3>
+            <p class="proyecto-placeholder__texto">
+              Nuevos trabajos en camino. Seguime y mirá cómo crece la galería.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ═════════════════════════ PROYECTOS ═════════════════════════ -->
-    <section class="proyectos" id="proyectos">
+    <!-- ────────────────────── SISTEMAS INDUSTRIALES ────────────────────── -->
+    <section class="seccion" id="sistemas">
       <div class="contenedor">
-        <p class="etiqueta reveal">proyectos</p>
-        <h2 class="titulo-seccion reveal">Páginas Web</h2>
-        <p class="seccion-intro reveal">
-          Dos ejemplos reales de lo que hago: páginas pensadas para vender, con foco en el
-          comercio de barrio y en la tienda de moda.
-        </p>
+        <header class="cabecera-seccion reveal">
+          <p class="etiqueta">Sistemas industriales</p>
+          <h2 class="cabecera-seccion__titulo">Aplicaciones con Python y Django</h2>
+          <p class="cabecera-seccion__texto">
+            Sistemas backend reales: monitoreo en tiempo real, gestión de proyectos con
+            roles y control de producción y stock. Todos con demo en vivo.
+          </p>
+        </header>
 
-        <div class="proyectos__grid">
-
-          <!-- Despensa El Vecino -->
-          <article class="tarjeta-proyecto reveal">
-            <a class="tarjeta-proyecto__imagen" href="demo-despensa/index.html" target="_blank" rel="noopener" aria-label="Abrir la demo de Despensa El Vecino">
-              <img src="imagenes/img_pantalla/demo_despensa.png" alt="Captura de pantalla de la página web Despensa El Vecino" loading="lazy" decoding="async" />
-              <span class="tarjeta-proyecto__demo">Ver demo <span aria-hidden="true">↗</span></span>
+        <div class="grid-sistemas">
+          <article class="sistema reveal">
+            <a class="sistema__imagen" href="https://simulador-de-maquina-industrial-1.onrender.com" target="_blank" rel="noopener" aria-label="Abrir la demo del Sistema de Monitoreo Industrial">
+              <img src="imagenes/monitor-industrial.jpg" alt="Dashboard del Sistema de Monitoreo Industrial" loading="lazy" decoding="async" />
+              <span class="sistema__demo">Ver demo ↗</span>
             </a>
-            <div class="tarjeta-proyecto__cuerpo">
-              <h3 class="tarjeta-proyecto__titulo">Despensa El Vecino</h3>
-              <p class="tarjeta-proyecto__descripcion">
-                Web mobile-first para un comercio de barrio: ofertas semanales, botón de
-                WhatsApp, horario con estado abierto/cerrado automático y categorías de
-                productos. Sin dependencias externas, lista para hostear en cualquier lado.
+            <div class="sistema__cuerpo">
+              <h3 class="sistema__titulo">Sistema de Monitoreo Industrial</h3>
+              <p class="sistema__texto">
+                Simula una línea de producción industrial con monitoreo en tiempo real,
+                alarmas automáticas y gestión de fallas.
               </p>
-              <ul class="tags" aria-label="Tecnologías utilizadas">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
+              <ul class="sistema__lista" aria-label="Características">
+                <li>Producción en tiempo real</li>
+                <li>Alarmas automáticas</li>
+                <li>Bloqueo por fallas</li>
+                <li>Dashboard dinámico</li>
               </ul>
-              <div class="tarjeta-proyecto__botones">
-                <a href="https://github.com/Higuita01/Regner.github.io/tree/main/demo-despensa" target="_blank" rel="noopener" class="btn btn--ghost">Ver código</a>
-                <a href="demo-despensa/index.html" target="_blank" rel="noopener" class="btn btn--primario">Ver demo <span aria-hidden="true">↗</span></a>
+              <ul class="proyecto__tags" aria-label="Tecnologías usadas">
+                <li>Python</li>
+                <li>Django</li>
+                <li>JavaScript</li>
+                <li>SQLite</li>
+              </ul>
+              <div class="sistema__botones">
+                <a href="https://github.com/Higuita01/Simulador-de-maquina-industrial" target="_blank" rel="noopener" class="btn btn--linea">Ver código</a>
+                <a href="https://simulador-de-maquina-industrial-1.onrender.com" target="_blank" rel="noopener" class="btn btn--acento">Ver demo ↗</a>
               </div>
             </div>
           </article>
 
-          <!-- LUMA -->
-          <article class="tarjeta-proyecto reveal">
-            <a class="tarjeta-proyecto__imagen" href="https://github.com/Higuita01/luma-tienda-ropa" target="_blank" rel="noopener" aria-label="Ver el código de LUMA en GitHub">
-              <img src="imagenes/img_pantalla/luma.png" alt="Captura de pantalla de la página web LUMA, tienda de ropa" loading="lazy" decoding="async" />
-              <span class="tarjeta-proyecto__demo">Ver código <span aria-hidden="true">↗</span></span>
+          <article class="sistema reveal">
+            <a class="sistema__imagen" href="https://gestor-de-proyectos-r3n0.onrender.com" target="_blank" rel="noopener" aria-label="Abrir la demo del Gestor de Proyectos y Tareas">
+              <img src="imagenes/gestor-proyectos.jpg" alt="Dashboard del Gestor de Proyectos y Tareas" loading="lazy" decoding="async" />
+              <span class="sistema__demo">Ver demo ↗</span>
             </a>
-            <div class="tarjeta-proyecto__cuerpo">
-              <h3 class="tarjeta-proyecto__titulo">LUMA — Tienda de ropa</h3>
-              <p class="tarjeta-proyecto__descripcion">
-                Web de moda contemporánea con catálogo de mujer, hombre y accesorios:
-                filtros por categoría, modal de producto, menú hamburguesa y animaciones
-                de aparición al hacer scroll.
+            <div class="sistema__cuerpo">
+              <h3 class="sistema__titulo">Gestor de Proyectos y Tareas</h3>
+              <p class="sistema__texto">
+                Gestiona proyectos, tareas y equipos con un sistema de roles, control de
+                estados y paneles de administración.
               </p>
-              <ul class="tags" aria-label="Tecnologías utilizadas">
+              <ul class="sistema__lista" aria-label="Características">
+                <li>Asignación de tareas</li>
+                <li>Roles y permisos</li>
+                <li>Dashboard administrativo</li>
+                <li>Seguimiento del progreso</li>
+              </ul>
+              <div class="sistema__demo-access">
+                <strong>Acceso de demostración</strong>
+                <p>Usuario: <code>demo</code> · Contraseña: <code>demo1234</code></p>
+              </div>
+              <ul class="proyecto__tags" aria-label="Tecnologías usadas">
+                <li>Python</li>
+                <li>Django</li>
                 <li>HTML</li>
                 <li>CSS</li>
-                <li>JavaScript</li>
+                <li>SQLite</li>
               </ul>
-              <div class="tarjeta-proyecto__botones">
-                <a href="https://github.com/Higuita01/luma-tienda-ropa" target="_blank" rel="noopener" class="btn btn--ghost">Ver código</a>
+              <div class="sistema__botones">
+                <a href="https://github.com/Higuita01/Gestor-de-Proyectos" target="_blank" rel="noopener" class="btn btn--linea">Ver código</a>
+                <a href="https://gestor-de-proyectos-r3n0.onrender.com" target="_blank" rel="noopener" class="btn btn--acento">Ver demo ↗</a>
               </div>
             </div>
           </article>
 
+          <article class="sistema reveal">
+            <a class="sistema__imagen" href="https://sistema-de-gesti-n-de-producci-n-y-stock.onrender.com" target="_blank" rel="noopener" aria-label="Abrir la demo del Sistema de Gestión de Producción y Stock">
+              <img src="imagenes/produccion-stock.jpg" alt="Home del Sistema de Gestión de Producción y Stock" loading="lazy" decoding="async" />
+              <span class="sistema__demo">Ver demo ↗</span>
+            </a>
+            <div class="sistema__cuerpo">
+              <h3 class="sistema__titulo">Producción y Stock</h3>
+              <p class="sistema__texto">
+                Controla la producción, el stock, el envasado y el despacho de una fábrica
+                de velas de punta a punta.
+              </p>
+              <ul class="sistema__lista" aria-label="Características">
+                <li>Registro de producción diaria</li>
+                <li>Control automático de stock</li>
+                <li>Gestión de envasado</li>
+                <li>Trazabilidad y validaciones</li>
+              </ul>
+              <ul class="proyecto__tags" aria-label="Tecnologías usadas">
+                <li>Python</li>
+                <li>Django</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>SQLite</li>
+              </ul>
+              <div class="sistema__botones">
+                <a href="https://github.com/Higuita01/Sistema-de-Gesti-n-de-Producci-n-y-Stock/tree/main" target="_blank" rel="noopener" class="btn btn--linea">Ver código</a>
+                <a href="https://sistema-de-gesti-n-de-producci-n-y-stock.onrender.com" target="_blank" rel="noopener" class="btn btn--acento">Ver demo ↗</a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ═════════════════════════ TECNOLOGÍAS ═════════════════════════ -->
-    <section class="tecnologias" id="tecnologias">
+    <!-- ─────────────────────────── PROCESO ─────────────────────────── -->
+    <section class="seccion seccion--alterna" id="proceso">
       <div class="contenedor">
-        <p class="etiqueta reveal">tecnologias</p>
-        <h2 class="titulo-seccion reveal">Con qué trabajo</h2>
-      </div>
+        <header class="cabecera-seccion reveal">
+          <p class="etiqueta">Cómo trabajo</p>
+          <h2 class="cabecera-seccion__titulo">De la idea a tu web en 3 pasos</h2>
+        </header>
 
-      <!-- Cinta infinita (marquee): el contenido se duplica y rota con CSS, pausa al pasar el mouse -->
-      <div class="marquee" aria-label="Tecnologías: Python, Django, HTML5, CSS3, JavaScript, SQLite, Git y GitHub">
-        <div class="marquee__pista">
-          <div class="marquee__grupo">
-            <span class="marquee__item"><i class="devicon-python-plain colored" aria-hidden="true"></i> Python</span>
-            <span class="marquee__item"><i class="devicon-django-plain" aria-hidden="true"></i> Django</span>
-            <span class="marquee__item"><i class="devicon-html5-plain colored" aria-hidden="true"></i> HTML5</span>
-            <span class="marquee__item"><i class="devicon-css3-plain colored" aria-hidden="true"></i> CSS3</span>
-            <span class="marquee__item"><i class="devicon-javascript-plain colored" aria-hidden="true"></i> JavaScript</span>
-            <span class="marquee__item"><i class="devicon-sqlite-plain" aria-hidden="true"></i> SQLite</span>
-            <span class="marquee__item"><i class="devicon-git-plain colored" aria-hidden="true"></i> Git</span>
-            <span class="marquee__item"><i class="devicon-github-original" aria-hidden="true"></i> GitHub</span>
-          </div>
-          <!-- Duplicado para el loop infinito -->
-          <div class="marquee__grupo" aria-hidden="true">
-            <span class="marquee__item"><i class="devicon-python-plain colored" aria-hidden="true"></i> Python</span>
-            <span class="marquee__item"><i class="devicon-django-plain" aria-hidden="true"></i> Django</span>
-            <span class="marquee__item"><i class="devicon-html5-plain colored" aria-hidden="true"></i> HTML5</span>
-            <span class="marquee__item"><i class="devicon-css3-plain colored" aria-hidden="true"></i> CSS3</span>
-            <span class="marquee__item"><i class="devicon-javascript-plain colored" aria-hidden="true"></i> JavaScript</span>
-            <span class="marquee__item"><i class="devicon-sqlite-plain" aria-hidden="true"></i> SQLite</span>
-            <span class="marquee__item"><i class="devicon-git-plain colored" aria-hidden="true"></i> Git</span>
-            <span class="marquee__item"><i class="devicon-github-original" aria-hidden="true"></i> GitHub</span>
-          </div>
+        <div class="grid-pasos">
+          <article class="paso reveal">
+            <p class="paso__numero" aria-hidden="true">01</p>
+            <h3 class="paso__titulo">Me contás tu idea</h3>
+            <p class="paso__texto">
+              Me escribís por WhatsApp o email y me contás qué necesitás: tu negocio,
+              tus productos, referencias que te gusten. Con eso te paso un
+              presupuesto cerrado.
+            </p>
+          </article>
+
+          <article class="paso reveal">
+            <p class="paso__numero" aria-hidden="true">02</p>
+            <h3 class="paso__titulo">Armo tu web</h3>
+            <p class="paso__texto">
+              Diseño y desarrollo a medida. Te mando avances en el camino y ajustamos
+              hasta que quede como la imaginaste.
+            </p>
+          </article>
+
+          <article class="paso reveal">
+            <p class="paso__numero" aria-hidden="true">03</p>
+            <h3 class="paso__titulo">La publicamos</h3>
+            <p class="paso__texto">
+              Te entrego la web lista, funcionando en tu dominio y adaptada a
+              celulares. Y quedo a disposición para lo que necesites después.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ═════════════════════════ CONTACTO ═════════════════════════ -->
-    <section class="contacto" id="contacto">
+    <!-- ────────────────────────── CONTACTO ────────────────────────── -->
+    <section class="seccion" id="contacto">
       <div class="contenedor">
-        <p class="etiqueta reveal">contacto</p>
-        <h2 class="titulo-seccion reveal">Hablemos de tu proyecto</h2>
-        <p class="seccion-intro reveal">
-          ¿Necesitás una página para tu negocio o un sistema a medida? Escribime y te
-          respondo a la brevedad.
-        </p>
+        <header class="cabecera-seccion reveal">
+          <p class="etiqueta">Contacto</p>
+          <h2 class="cabecera-seccion__titulo">¿Hablamos de tu proyecto?</h2>
+          <p class="cabecera-seccion__texto">
+            Respondo en el día. Contame qué estás necesitando y te paso un
+            presupuesto sin compromiso.
+          </p>
+        </header>
 
-        <div class="contacto__grid">
-          <a href="tel:+543404622589" class="contacto__item reveal">
-            <span class="contacto__icono" aria-hidden="true">📞</span>
-            <span class="contacto__texto">
-              <span class="contacto__etiqueta">Teléfono</span>
-              +54 3404 622589
-            </span>
-          </a>
+        <div class="contacto-grid">
+          <div class="contacto__datos reveal">
+            <article class="dato">
+              <p class="dato__titulo">Email</p>
+              <p><a href="mailto:regnerleandro777@gmail.com">regnerleandro777@gmail.com</a></p>
+            </article>
+            <article class="dato">
+              <p class="dato__titulo">WhatsApp</p>
+              <p><a href="https://wa.me/543404622589" target="_blank" rel="noopener">+54 3404 62-2589</a></p>
+            </article>
+            <article class="dato">
+              <p class="dato__titulo">Ubicación</p>
+              <p>Santa Fe, Argentina</p>
+              <p>Zona horaria GMT-3</p>
+            </article>
+            <article class="dato">
+              <p class="dato__titulo">Mi perfil freelance</p>
+              <p><a href="https://www.workana.com" target="_blank" rel="noopener">Workana ↗</a></p>
+            </article>
+          </div>
 
-          <a href="mailto:regnerleandro777@gmail.com" class="contacto__item reveal">
-            <span class="contacto__icono" aria-hidden="true">✉️</span>
-            <span class="contacto__texto">
-              <span class="contacto__etiqueta">Email</span>
-              regnerleandro777@gmail.com
-            </span>
-          </a>
+          <form class="formulario reveal" id="formulario" novalidate>
+            <div class="formulario__fila">
+              <div class="formulario__campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required minlength="2" />
+              </div>
+              <div class="formulario__campo">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tumail@ejemplo.com" required />
+              </div>
+            </div>
+            <div class="formulario__campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contame qué estás necesitando…" required minlength="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn--acento btn--ancho">Enviar mensaje</button>
+            <p class="formulario__error" id="error-formulario" role="alert" hidden></p>
+          </form>
 
-          <a href="https://wa.me/543404622589" target="_blank" rel="noopener" class="btn btn--whatsapp reveal">
-            <span aria-hidden="true">💬</span> Escribime por WhatsApp
-          </a>
+          <div class="formulario-exito" id="exito-formulario" hidden>
+            <p class="formulario-exito__icono" aria-hidden="true">✓</p>
+            <h3>¡Gracias por escribirme!</h3>
+            <p>Te abrí WhatsApp con tu mensaje ya escrito. Solo tocá enviar y listo.</p>
+          </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- ═════════════════════════ FOOTER ═════════════════════════ -->
+  <!-- ─────────────────────────── FOOTER ─────────────────────────── -->
   <footer class="footer">
     <div class="contenedor footer__interior">
-      <p>© <span id="anio">2026</span> Leandro Regner · Desarrollo web para comercios</p>
-      <code class="footer__codigo">// leandro.regner — fin del archivo</code>
+      <div class="footer__marca">
+        <p class="logo logo--footer">Leandro<span class="logo__punto">.</span></p>
+        <p>Código limpio, diseño que convence.</p>
+      </div>
+      <nav class="footer__col" aria-label="Navegación del pie">
+        <p class="footer__titulo">Explorar</p>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#tecnologias">Tecnologías</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#sistemas">Sistemas</a></li>
+        </ul>
+      </nav>
+      <div class="footer__col">
+        <p class="footer__titulo">Servicios</p>
+        <ul>
+          <li><a href="#servicios">Landing pages</a></li>
+          <li><a href="#servicios">Tiendas online</a></li>
+          <li><a href="#servicios">Rediseño web</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__contacto">
+        <p class="footer__titulo">Contacto</p>
+        <p><a href="mailto:regnerleandro777@gmail.com">regnerleandro777@gmail.com</a></p>
+        <p><a href="https://wa.me/543404622589" target="_blank" rel="noopener">+54 3404 62-2589</a></p>
+      </div>
+    </div>
+    <div class="footer__barra">
+      <div class="contenedor footer__barra-interior">
+        <p>© <span id="anio">2026</span> Leandro Regner — Todos los derechos reservados.</p>
+        <p>Hecho a mano en Santa Fe.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/portfolio.js"></script>
 </body>
-
 </html>
