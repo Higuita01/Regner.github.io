@@ -1,0 +1,301 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Arial, Helvetica, sans-serif;
+    background:#f7f4ee;
+    color:#2d2a26;
+    line-height:1.5;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:10;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 20px;
+    background:#2e5e3b;
+    color:#fff;
+}
+
+.store-info{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    font-size:1.8rem;
+    background:rgba(255,255,255,.15);
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.store-info h1{
+    font-size:1.1rem;
+    font-weight:700;
+}
+
+.store-info p{
+    font-size:.75rem;
+    opacity:.9;
+}
+
+.badge{
+    background:#ffb400;
+    color:#2d2a26;
+    font-size:.7rem;
+    font-weight:700;
+    padding:5px 12px;
+    border-radius:30px;
+    white-space:nowrap;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#2e5e3b,#4a8a5a);
+    color:#fff;
+    text-align:center;
+    padding:48px 20px;
+}
+
+.hero h2{
+    font-size:1.6rem;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:.95rem;
+    max-width:420px;
+    margin:0 auto 24px;
+    opacity:.95;
+}
+
+.btn-whatsapp{
+    display:inline-block;
+    background:#25d366;
+    color:#fff;
+    font-weight:700;
+    font-size:1rem;
+    padding:14px 28px;
+    border-radius:50px;
+    transition:.2s;
+}
+
+.btn-whatsapp:hover{
+    background:#1fb958;
+    transform:translateY(-2px);
+}
+
+/* SECCIONES GENERALES */
+section{
+    padding:40px 20px;
+    max-width:600px;
+    margin:0 auto;
+}
+
+.section-title{
+    font-size:1.3rem;
+    color:#2e5e3b;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* PROMOS */
+.promos{
+    max-width:520px;
+}
+
+.promo-card{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background:#fff;
+    border-radius:16px;
+    padding:16px;
+    margin-bottom:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+    color:#2d2a26;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.promo-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+
+.promo-tag{
+    background:#ffb400;
+    color:#2d2a26;
+    font-weight:800;
+    font-size:.85rem;
+    padding:8px 10px;
+    border-radius:10px;
+    white-space:nowrap;
+}
+
+.promo-text h3{
+    font-size:.95rem;
+}
+
+.promo-text p{
+    font-size:.9rem;
+    color:#666;
+}
+
+.promo-text strong{
+    color:#e63946;
+    font-size:1rem;
+}
+
+.promo-text s{
+    color:#999;
+}
+
+/* CATEGORIAS */
+.cat-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.cat-card{
+    background:#fff;
+    border-radius:16px;
+    padding:18px 14px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+    transition:.2s;
+    color:#2d2a26;
+}
+
+.cat-card:hover{
+    transform:translateY(-3px);
+}
+
+.cat-icon{
+    font-size:2rem;
+    margin-bottom:8px;
+}
+
+.cat-card h3{
+    font-size:.95rem;
+    color:#2e5e3b;
+}
+
+.cat-card p{
+    font-size:.75rem;
+    color:#777;
+    margin-top:4px;
+}
+
+/* COMO FUNCIONA */
+.como-funciona{
+    text-align:center;
+}
+
+.pasos{
+    margin-bottom:24px;
+}
+
+.paso{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background:#fff;
+    border-radius:14px;
+    padding:14px 16px;
+    margin-bottom:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+    text-align:left;
+}
+
+.paso-num{
+    background:#2e5e3b;
+    color:#fff;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    font-size:1rem;
+    flex-shrink:0;
+}
+
+.paso p{
+    font-size:.95rem;
+}
+
+/* CONTACTO */
+.contacto-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.info-card{
+    background:#fff;
+    border-radius:14px;
+    padding:16px 10px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+.info-icon{
+    font-size:1.5rem;
+    display:block;
+    margin-bottom:6px;
+}
+
+.info-card h3{
+    font-size:.85rem;
+    color:#2e5e3b;
+}
+
+.info-card p{
+    font-size:.7rem;
+    color:#666;
+    margin-top:4px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:24px 20px;
+    background:#2e5e3b;
+    color:#fff;
+    font-size:.85rem;
+}
+
+footer .demo-note{
+    font-size:.7rem;
+    opacity:.6;
+    margin-top:6px;
+}
+
+/* DESKTOP */
+@media(min-width:640px){
+    .cat-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+    .hero h2{
+        font-size:2rem;
+    }
+}

@@ -2,410 +2,286 @@
 <html lang="es">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leandro Regner — Desarrollo web para comercios</title>
+  <meta name="description" content="Portafolio de Leandro Regner, desarrollador web. Páginas web simples y efectivas para comercios, con presencia en el celular, Google y WhatsApp. Backend con Python y Django." />
+  <meta name="author" content="Leandro Regner" />
 
-    <meta charset="UTF-8">
+  <!-- Favicon minimalista de código -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230a0f1f%22/><text x=%2250%22 y=%2268%22 font-size=%2250%22 text-anchor=%22middle%22 fill=%22%2300e5ff%22 font-family=%22monospace%22>&lt;/&gt;</text></svg>" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tipografías: Space Grotesk (títulos), Inter (texto), JetBrains Mono (código/etiquetas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
-    <title>Leandro Regner | Portfolio</title>
+  <!-- Iconos de tecnologías (devicon) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
+  <!-- Marca JS activo: sin JS, los elementos reveal quedan visibles igual -->
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+  <!-- ═════════════════════════ HEADER ═════════════════════════ -->
+  <header class="header" id="header">
+    <div class="contenedor header__interior">
+      <a href="#inicio" class="logo" aria-label="Leandro Regner — volver al inicio">
+        <span class="logo__simbolo" aria-hidden="true">&lt;/&gt;</span> leandro.regner
+      </a>
 
-    <nav>
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="#inicio" class="nav__link nav__link--activo">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+          <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+          <li><a href="#tecnologias" class="nav__link">Tecnologías</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+          <li><a href="proyectos.html" class="nav__link nav__link--sistemas">Sistemas <span aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
 
-        <a href="#hero">Inicio</a>
+      <button class="hamburguesa" id="boton-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-        <a href="#project">Proyecto</a>
-
-        <a href="#skills">Tecnologías</a>
-
-        <a href="#contact">Contacto</a>
-
+  <!-- Menú móvil (pantalla completa) -->
+  <div class="menu-movil" id="menu-movil" aria-hidden="true">
+    <nav class="menu-movil__nav" aria-label="Navegación móvil">
+      <a href="#inicio" class="menu-movil__link">Inicio</a>
+      <a href="#sobre-mi" class="menu-movil__link">Sobre mí</a>
+      <a href="#proyectos" class="menu-movil__link">Proyectos</a>
+      <a href="#tecnologias" class="menu-movil__link">Tecnologías</a>
+      <a href="#contacto" class="menu-movil__link">Contacto</a>
+      <a href="proyectos.html" class="menu-movil__link menu-movil__link--destacado">Aplicaciones y Sistemas <span aria-hidden="true">→</span></a>
     </nav>
+  </div>
 
+  <main>
 
+    <!-- ═════════════════════════ HERO ═════════════════════════ -->
+    <section class="hero" id="inicio">
+      <div class="glow glow--cian" aria-hidden="true"></div>
+      <div class="glow glow--violeta" aria-hidden="true"></div>
+      <div class="hero__rejilla" aria-hidden="true"></div>
 
-    <!-- HERO -->
+      <div class="contenedor hero__interior">
+        <p class="etiqueta reveal">hola, soy</p>
+        <h1 class="hero__titulo reveal">Leandro <span class="hero__apellido">Regner</span></h1>
+        <p class="hero__subtitulo reveal">Desarrollo web para negocios que quieren <span class="texto-cian">vender más</span></p>
+        <p class="hero__texto reveal">
+          Hago páginas web simples y efectivas para comercios, con presencia en el celular,
+          Google y WhatsApp. Código limpio, proyectos a tiempo y soporte incluido.
+        </p>
 
-    <section id="hero">
-
-        <div class="glow glow1"></div>
-
-        <div class="glow glow2"></div>
-
-        <div class="container">
-
-            <h1>Hola, soy Leandro Regner</h1>
-
-            <h2>
-
-                Actualmente me estoy formando como Desarrollador Full Stack, con especial interés en el desarrollo Backend utilizando Python y Django.
-
-                Construyo aplicaciones web y proyectos personales o privados para adquirir experiencia práctica en automatización, gestión de producción y sistemas industriales.
-
-            </h2>
-
-            <div class="hero-buttons">
-
-                <a href="https://github.com/Higuita01" target="_blank">
-
-                    GitHub
-
-                </a>
-
-            </div>
-
+        <div class="hero__botones reveal reveal--1">
+          <a href="#proyectos" class="btn btn--primario">Ver mis proyectos <span aria-hidden="true">→</span></a>
+          <a href="#contacto" class="btn btn--secundario">Contacto</a>
         </div>
 
+        <p class="hero__estado reveal reveal--2">
+          <span class="punto-estado" aria-hidden="true"></span> disponible para nuevos proyectos
+        </p>
+      </div>
+
+      <a href="#sobre-mi" class="hero__scroll" aria-label="Bajar a la siguiente sección"><span aria-hidden="true">↓</span></a>
     </section>
 
+    <!-- ═════════════════════════ SOBRE MÍ ═════════════════════════ -->
+    <section class="sobre-mi" id="sobre-mi">
+      <div class="contenedor">
+        <p class="etiqueta reveal">sobre_mi</p>
+        <h2 class="titulo-seccion reveal">Quién está detrás del código</h2>
 
-
-    <!-- PROYECTO -->
-
-    <section id="project">
-
-        <div class="container">
-
-            <h2 class="section-title">
-
-                Proyectos
-
-            </h2>
-
-            <!-- PROYECTO 1 -->
-
-            <div class="project-card">
-
-                <h2>
-
-                    Sistema de Monitoreo Industrial
-
-                </h2>
-
-                <img src="imagenes/img_pantalla/monitor_industrial/Pantalla Running.jpeg" alt="Dashboard del sistema">
-
-                <p>
-
-                    Aplicación web desarrollada con Django que simula una línea de producción industrial con monitoreo
-                    en tiempo real, alarmas automáticas y gestión de fallas
-
-                </p>
-
-                <ul>
-
-                    <li>Simulación de máquinas</li>
-
-                    <li>Producción en tiempo real</li>
-
-                    <li>Alarmas automáticas</li>
-
-                    <li>Bloqueo por fallas</li>
-
-                    <li>Reset manual</li>
-
-                    <li>Dashboard dinámico</li>
-
-                </ul>
-
-                <div class="tech-stack">
-
-                    <span>Python</span>
-
-                    <span>Django</span>
-
-                    <span>JavaScript</span>
-
-                    <span>SQLite</span>
-
-                </div>
-
-                <div class="project-buttons">
-
-                    <a href="https://github.com/Higuita01/Simulador-de-maquina-industrial" target="_blank">
-
-                        Ver Código
-
-                    </a>
-
-                    <a href="https://simulador-de-maquina-industrial-1.onrender.com" target="_blank">
-                        Ver Demo
-                    </a>
-
-                </div>
-
+        <div class="sobre-mi__grid">
+          <!--
+            ESPACIO PARA FOTO:
+            Reemplazá el bloque .marco-foto por:
+            <img src="imagenes/leandro.jpg" alt="Leandro Regner" class="sobre-mi__foto" />
+            y listo, se adapta al tamaño del marco.
+          -->
+          <div class="marco-foto reveal" role="img" aria-label="Espacio reservado para la foto de Leandro Regner">
+            <div class="marco-foto__interior">
+              <span class="marco-foto__icono" aria-hidden="true">👨‍💻</span>
+              <code class="marco-foto__ruta">~/assets/leandro.jpg</code>
+              <span class="marco-foto__aviso">// espacio para tu foto</span>
             </div>
+          </div>
 
-            <!-- PROYECTO 2 -->
+          <div class="sobre-mi__texto reveal">
+            <p>
+              Soy <strong>Leandro Regner</strong>, desarrollador web de Argentina. Trabajo con
+              comercios y emprendimientos que necesitan presencia digital real: páginas que se
+              ven bien en el celular, que aparecen en Google y que llevan clientes directo a
+              WhatsApp.
+            </p>
+            <p>
+              También desarrollo <strong>sistemas backend con Python y Django</strong>: dashboards
+              de monitoreo industrial, gestión de producción y control de stock. Me gusta el
+              código claro, entregar a tiempo y acompañar al cliente después de publicar.
+            </p>
+            <ul class="sobre-mi__lista">
+              <li><span class="texto-cian" aria-hidden="true">▹</span> Páginas web mobile-first</li>
+              <li><span class="texto-cian" aria-hidden="true">▹</span> Backend con Python / Django</li>
+              <li><span class="texto-cian" aria-hidden="true">▹</span> Presencia en Google y WhatsApp</li>
+              <li><span class="texto-cian" aria-hidden="true">▹</span> Soporte incluido después de entregar</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="project-card">
+    <!-- ═════════════════════════ PROYECTOS ═════════════════════════ -->
+    <section class="proyectos" id="proyectos">
+      <div class="contenedor">
+        <p class="etiqueta reveal">proyectos</p>
+        <h2 class="titulo-seccion reveal">Páginas Web</h2>
+        <p class="seccion-intro reveal">
+          Dos ejemplos reales de lo que hago: páginas pensadas para vender, con foco en el
+          comercio de barrio y en la tienda de moda.
+        </p>
 
-                <h2>
+        <div class="proyectos__grid">
 
-                    Gestor de Proyectos y Tareas
-
-                </h2>
-
-                <div class="gallery">
-
-                    <img src="imagenes/img_pantalla/gestor_de_proyecto/Captura de pantalla_27-7-2026_93340_gestor-de-proyectos-r3n0.onrender.com.jpeg"
-                        alt="Dashboard del gestor de proyectos">
-
-                </div>
-
-                <p>
-
-                    Aplicación web desarrollada con Django para gestionar proyectos,
-                    tareas y equipos de trabajo mediante un sistema de roles,
-                    seguimiento del progreso y paneles de administración.
-
-                </p>
-
-                <ul>
-
-                    <li>Gestión de proyectos</li>
-
-                    <li>Asignación de tareas</li>
-
-                    <li>Control de estados</li>
-
-                    <li>Roles y permisos</li>
-
-                    <li>Dashboard administrativo</li>
-
-                    <li>Seguimiento del progreso</li>
-
-                </ul>
-
-                <div class="tech-stack">
-
-                    <span>Python</span>
-
-                    <span>Django</span>
-
-                    <span>HTML</span>
-
-                    <span>CSS</span>
-
-                    <span>SQLite</span>
-
-                </div>
-
-                <div class="demo-access">
-
-                    <strong>Acceso de demostración</strong>
-
-                    <p>Usuario: <code> demo</code></p>
-
-                    <p>Contraseña: <code> demo1234</code></p>
-
-                </div>
-
-                <div class="project-buttons">
-
-                    <a href="https://github.com/Higuita01/Gestor-de-Proyectos" target="_blank">
-
-                        Ver Código
-
-                    </a>
-
-                    <a href="https://gestor-de-proyectos-r3n0.onrender.com" target="_blank">
-
-                        Ver Demo
-
-                    </a>
-
-                </div>
-
+          <!-- Despensa El Vecino -->
+          <article class="tarjeta-proyecto reveal">
+            <a class="tarjeta-proyecto__imagen" href="demo-despensa/index.html" target="_blank" rel="noopener" aria-label="Abrir la demo de Despensa El Vecino">
+              <img src="imagenes/img_pantalla/demo_despensa.png" alt="Captura de pantalla de la página web Despensa El Vecino" loading="lazy" decoding="async" />
+              <span class="tarjeta-proyecto__demo">Ver demo <span aria-hidden="true">↗</span></span>
+            </a>
+            <div class="tarjeta-proyecto__cuerpo">
+              <h3 class="tarjeta-proyecto__titulo">Despensa El Vecino</h3>
+              <p class="tarjeta-proyecto__descripcion">
+                Web mobile-first para un comercio de barrio: ofertas semanales, botón de
+                WhatsApp, horario con estado abierto/cerrado automático y categorías de
+                productos. Sin dependencias externas, lista para hostear en cualquier lado.
+              </p>
+              <ul class="tags" aria-label="Tecnologías utilizadas">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="tarjeta-proyecto__botones">
+                <a href="https://github.com/Higuita01/Higuita01.github.io/tree/main/demo-despensa" target="_blank" rel="noopener" class="btn btn--ghost">Ver código</a>
+                <a href="demo-despensa/index.html" target="_blank" rel="noopener" class="btn btn--primario">Ver demo <span aria-hidden="true">↗</span></a>
+              </div>
             </div>
+          </article>
 
-
-
-            <!-- PROYECTO 3 -->
-
-            <div class="project-card">
-
-                <h2>
-
-                    gestión integral de producción, stock, envasado y despacho.
-
-                </h2>
-
-                <div class="gallery">
-
-                    <img src="imagenes/img_pantalla/img_control_stock/Home.jpeg" alt="Home">
-
-                </div>
-
-                <p>
-
-                    Aplicación web desarrollada con Django para gestionar
-                    la producción, stock, envasado y despacho de una fábrica
-                    de velas.
-
-                </p>
-
-                <ul>
-
-                    <li>Registro de producción diaria</li>
-
-                    <li>Control automático de stock</li>
-
-                    <li>Gestión de envasado</li>
-
-                    <li>Control de pallets por lote</li>
-
-                    <li>Despacho de pallets</li>
-
-                    <li>Trazabilidad y validaciones</li>
-
-                </ul>
-
-                <div class="tech-stack">
-
-                    <span>Python</span>
-
-                    <span>Django</span>
-
-                    <span>HTML</span>
-
-                    <span>CSS</span>
-
-                    <span>SQLite</span>
-
-                </div>
-
-                <div class="project-buttons">
-
-                    <a href="https://github.com/Higuita01/Sistema-de-Gesti-n-de-Producci-n-y-Stock/tree/main"
-                        target="_blank">
-
-                        Ver Código
-
-                    </a>
-
-                    <a href="https://sistema-de-gesti-n-de-producci-n-y-stock.onrender.com" target="_blank">
-                        Ver Demo
-                    </a>
-
-                </div>
-
+          <!-- LUMA -->
+          <article class="tarjeta-proyecto reveal">
+            <a class="tarjeta-proyecto__imagen" href="https://github.com/Higuita01/luma-tienda-ropa" target="_blank" rel="noopener" aria-label="Ver el código de LUMA en GitHub">
+              <img src="imagenes/img_pantalla/luma.png" alt="Captura de pantalla de la página web LUMA, tienda de ropa" loading="lazy" decoding="async" />
+              <span class="tarjeta-proyecto__demo">Ver código <span aria-hidden="true">↗</span></span>
+            </a>
+            <div class="tarjeta-proyecto__cuerpo">
+              <h3 class="tarjeta-proyecto__titulo">LUMA — Tienda de ropa</h3>
+              <p class="tarjeta-proyecto__descripcion">
+                Web de moda contemporánea con catálogo de mujer, hombre y accesorios:
+                filtros por categoría, modal de producto, menú hamburguesa y animaciones
+                de aparición al hacer scroll.
+              </p>
+              <ul class="tags" aria-label="Tecnologías utilizadas">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="tarjeta-proyecto__botones">
+                <a href="https://github.com/Higuita01/luma-tienda-ropa" target="_blank" rel="noopener" class="btn btn--ghost">Ver código</a>
+              </div>
             </div>
+          </article>
 
         </div>
-
+      </div>
     </section>
 
-    <section id="skills">
+    <!-- ═════════════════════════ TECNOLOGÍAS ═════════════════════════ -->
+    <section class="tecnologias" id="tecnologias">
+      <div class="contenedor">
+        <p class="etiqueta reveal">tecnologias</p>
+        <h2 class="titulo-seccion reveal">Con qué trabajo</h2>
+      </div>
 
-        <div class="container">
-
-            <h2 class="section-title">
-                Tecnologías
-            </h2>
-
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                    <i class="devicon-python-plain colored"></i>
-                    <h3>Python</h3>
-                </div>
-
-                <div class="skill-card">
-                    <i class="devicon-django-plain"></i>
-                    <h3>Django</h3>
-                </div>
-
-                <div class="skill-card">
-                    <i class="devicon-html5-plain colored"></i>
-                    <h3>HTML5</h3>
-                </div>
-
-                <div class="skill-card">
-                    <i class="devicon-css3-plain colored"></i>
-                    <h3>CSS3</h3>
-                </div>
-
-                <div class="skill-card">
-                    <i class="devicon-javascript-plain colored"></i>
-                    <h3>JavaScript</h3>
-                </div>
-
-                <div class="skill-card">
-                    <i class="devicon-sqlite-plain"></i>
-                    <h3>SQLite</h3>
-                </div>
-
-                <div class="skill-card">
-                    <i class="devicon-git-plain colored"></i>
-                    <h3>Git</h3>
-                </div>
-
-                <div class="skill-card">
-                    <i class="devicon-github-original"></i>
-                    <h3>GitHub</h3>
-                </div>
-
-                <div class="skill-card">
-                    <iconify-icon icon="simple-icons:openai"></iconify-icon>
-                    <h3>ChatGPT</h3>
-                </div>
-
-                <div class="skill-card">
-                    <iconify-icon icon="logos:claude-icon"></iconify-icon>
-                    <h3>Claude Code</h3>
-                </div>
-
-                <div class="skill-card">
-                    <iconify-icon icon="simple-icons:googlegemini"></iconify-icon>
-                    <h3>Gemini</h3>
-                </div>
-
-            </div>
-
+      <!-- Cinta infinita (marquee): el contenido se duplica y rota con CSS, pausa al pasar el mouse -->
+      <div class="marquee" aria-label="Tecnologías: Python, Django, HTML5, CSS3, JavaScript, SQLite, Git y GitHub">
+        <div class="marquee__pista">
+          <div class="marquee__grupo">
+            <span class="marquee__item"><i class="devicon-python-plain colored" aria-hidden="true"></i> Python</span>
+            <span class="marquee__item"><i class="devicon-django-plain" aria-hidden="true"></i> Django</span>
+            <span class="marquee__item"><i class="devicon-html5-plain colored" aria-hidden="true"></i> HTML5</span>
+            <span class="marquee__item"><i class="devicon-css3-plain colored" aria-hidden="true"></i> CSS3</span>
+            <span class="marquee__item"><i class="devicon-javascript-plain colored" aria-hidden="true"></i> JavaScript</span>
+            <span class="marquee__item"><i class="devicon-sqlite-plain" aria-hidden="true"></i> SQLite</span>
+            <span class="marquee__item"><i class="devicon-git-plain colored" aria-hidden="true"></i> Git</span>
+            <span class="marquee__item"><i class="devicon-github-original" aria-hidden="true"></i> GitHub</span>
+          </div>
+          <!-- Duplicado para el loop infinito -->
+          <div class="marquee__grupo" aria-hidden="true">
+            <span class="marquee__item"><i class="devicon-python-plain colored" aria-hidden="true"></i> Python</span>
+            <span class="marquee__item"><i class="devicon-django-plain" aria-hidden="true"></i> Django</span>
+            <span class="marquee__item"><i class="devicon-html5-plain colored" aria-hidden="true"></i> HTML5</span>
+            <span class="marquee__item"><i class="devicon-css3-plain colored" aria-hidden="true"></i> CSS3</span>
+            <span class="marquee__item"><i class="devicon-javascript-plain colored" aria-hidden="true"></i> JavaScript</span>
+            <span class="marquee__item"><i class="devicon-sqlite-plain" aria-hidden="true"></i> SQLite</span>
+            <span class="marquee__item"><i class="devicon-git-plain colored" aria-hidden="true"></i> Git</span>
+            <span class="marquee__item"><i class="devicon-github-original" aria-hidden="true"></i> GitHub</span>
+          </div>
         </div>
-
+      </div>
     </section>
 
-    <section id="contact">
+    <!-- ═════════════════════════ CONTACTO ═════════════════════════ -->
+    <section class="contacto" id="contacto">
+      <div class="contenedor">
+        <p class="etiqueta reveal">contacto</p>
+        <h2 class="titulo-seccion reveal">Hablemos de tu proyecto</h2>
+        <p class="seccion-intro reveal">
+          ¿Necesitás una página para tu negocio o un sistema a medida? Escribime y te
+          respondo a la brevedad.
+        </p>
 
-        <div class="container">
+        <div class="contacto__grid">
+          <a href="tel:+543404622589" class="contacto__item reveal">
+            <span class="contacto__icono" aria-hidden="true">📞</span>
+            <span class="contacto__texto">
+              <span class="contacto__etiqueta">Teléfono</span>
+              +54 3404 622589
+            </span>
+          </a>
 
-            <h2>Contacto</h2>
+          <a href="mailto:regnerleandro777@gmail.com" class="contacto__item reveal">
+            <span class="contacto__icono" aria-hidden="true">✉️</span>
+            <span class="contacto__texto">
+              <span class="contacto__etiqueta">Email</span>
+              regnerleandro777@gmail.com
+            </span>
+          </a>
 
-            <div class="contact-links">
-
-                <p>
-                    📞 <strong>Teléfono:</strong>
-                    +54 3404 622589
-                    </a>
-                </p>
-
-                <p>
-                    ✉️ <strong>Correo:</strong>
-                    regnerleandro777@gmail.com
-                    </a>
-                </p>
-
-            </div>
-
+          <a href="https://wa.me/543404622589" target="_blank" rel="noopener" class="btn btn--whatsapp reveal">
+            <span aria-hidden="true">💬</span> Escribime por WhatsApp
+          </a>
         </div>
-
+      </div>
     </section>
 
+  </main>
 
-    <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+  <!-- ═════════════════════════ FOOTER ═════════════════════════ -->
+  <footer class="footer">
+    <div class="contenedor footer__interior">
+      <p>© <span id="anio">2026</span> Leandro Regner · Desarrollo web para comercios</p>
+      <code class="footer__codigo">// leandro.regner — fin del archivo</code>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
